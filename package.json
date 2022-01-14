@@ -1,0 +1,26 @@
+{
+  "name": "inventory-backend",
+  "version": "1.0.0",
+  "description": "inventory tracking web application for logistics company, MoveSharp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhananjayan-PN/Inventory-Backend.git"
+  },
+  "keywords": [],
+  "author": "Dhananjayan P N",
+  "license": "ISC",
+  "homepage": "https://github.com/Dhananjayan-PN/Inventory-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
