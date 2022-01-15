@@ -169,7 +169,7 @@ const App = () => {
         </div>}
       </div>
       {loading ?
-      <CircularProgress style={{display: "flex", justifyContent: "center", width: "100%", marginTop: 60}} /> :
+      <CircularProgress style={{marginTop: 60, marginLeft: "50%"}} /> :
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650}}>
           <TableHead>
