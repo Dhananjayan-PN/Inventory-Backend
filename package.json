@@ -1,7 +1,7 @@
 {
   "name": "inventory-backend",
   "version": "1.0.0",
-  "description": "inventory tracking web application for logistics company, MoveSharp",
+  "description": "inventory tracking web application for logistics company",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

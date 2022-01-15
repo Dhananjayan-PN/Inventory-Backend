@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const apiRoute = require("./routes/api");
+const path = require("path")
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://pndjay:movesharp@cluster0.e8npv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 
@@ -23,9 +24,9 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/ping", (req, res) => {
-    res.json({"message": "Server is running!"});
-});
+app.use(express.static(path.join("frontend", "build")));
+
+app.get("/ping", (req, res) => res.json({"message": "Server is running!"}));
 
 app.use("/api", apiRoute)
 

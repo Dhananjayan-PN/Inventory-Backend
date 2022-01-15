@@ -1,2 +1,2 @@
 # Inventory-Backend
-inventory tracking web application for logistics company, MoveSharp
+inventory tracking web application for logistics company
