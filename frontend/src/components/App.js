@@ -46,7 +46,7 @@ const App = () => {
   }, []);
   
   const getItems = () => {
-    axios.get("http://localhost:8080/api/item/get-all")
+    axios.get("/api/item/get-all")
       .then((response) => {
         setItems(response.data);
         setLoading(false);
@@ -55,7 +55,7 @@ const App = () => {
   
   const getLocations = () => {
     setLoading(true);
-    axios.get("http://localhost:8080/api/location/get-all")
+    axios.get("/api/location/get-all")
       .then((response) => {
         let locs = {}
         for (const loc of response.data) {
@@ -90,7 +90,7 @@ const App = () => {
       units: itemUnits,
       cost: itemCost
     }
-    axios.post("http://localhost:8080/api/item/create",newItem)
+    axios.post("/api/item/create",newItem)
       .then((response) => {
         getLocations();
         setItemDiag(false);
@@ -105,7 +105,7 @@ const App = () => {
   };
   
   const deleteItem = (itemId) => {
-    axios.delete(`http://localhost:8080/api/item/${itemId}`)
+    axios.delete(`/api/item/${itemId}`)
       .then((response) => {
         getLocations();
       })
@@ -121,7 +121,7 @@ const App = () => {
       units: itemUnits,
       cost: itemCost
     }
-    axios.put(`http://localhost:8080/api/item/${editId}`, updatedItem)
+    axios.put(`/api/item/${editId}`, updatedItem)
       .then((response) => {
         getLocations();
         setItemDiag(false);
@@ -144,7 +144,7 @@ const App = () => {
       state: locState,
       zip: locZip
     }
-    axios.post("http://localhost:8080/api/location/create",newLocation)
+    axios.post("/api/location/create",newLocation)
       .then((response) => {
         getLocations();
         setLocationDiag(false);
